@@ -7,7 +7,7 @@ services:
       dockerfile: dockerfile
   ejabberd:
     image: rroemhild/ejabberd
-    hostname: labor.bugabinga.net
+    hostname: it-top.pp.ua
     volumes:
       - ejabberd-data
     volumes:
@@ -20,9 +20,9 @@ services:
       - 5443:5443
     environment:
       - ERLANG_NODE=ejabberd
-      - XMPP_DOMAIN=labor.bugabinga.net
+      - XMPP_DOMAIN=it-top.pp.ua
       - EJABBERD_ADMINS=admin@it-top.pp.ua
-      - EJABBERD_USERS=admin@it-top.pp.ua user@it-top.pp.ua
+      - EJABBERD_USERS=admin@it-top.pp.ua:123456 user@it-top.pp.ua:123456
       - EJABBERD_SSLCERT_HOST=/opt/ejabberd/ssl/host.pem
-      - EJABBERD_SSLCERT_LABOR_BUGABINGA_NET=/opt/ejabberd/ssl/labor.bugabinga.net.pem
+      - EJABBERD_SSLCERT_IT-TOP_PP_UA=/opt/ejabberd/ssl/it-top.pp.ua.pem
       - TZ=Europe/Berlin
