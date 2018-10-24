@@ -4,7 +4,7 @@ services:
   ejabberd-data:
     build:
       context: ./ej-data/
-      dockerfile: dockerfile
+      dockerfile: dockerfiles
   ejabberd:
     image: rroemhild/ejabberd
     hostname: it-top.pp.ua
