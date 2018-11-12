@@ -23,4 +23,4 @@ services:
        - XMPP_DOMAIN=it-top.pp.ua
        - EJABBERD_ADMINS=admin@it-top.pp.ua
        - EJABBERD_USERS=admin@it-top.pp.ua:123456
-       - EJABBERD_REGISTER_ADMIN_ONLY: true
+       - EJABBERD_REGISTER_ADMIN_ONLY=true
