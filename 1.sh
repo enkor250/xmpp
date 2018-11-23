@@ -18,6 +18,8 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install certbot -y
 
+cat /etc/letsencrypt/live/$DOMAIN/{privkey,fullchain}.pem > /etc/ejabberd/$DOMAIN.pem
+
 cd /opt
 git clone https://github.com/it-toppp/xmpp.git
 chown 999 -R /opt/xmpp/ejabberd
