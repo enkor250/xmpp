@@ -43,7 +43,7 @@ sudo docker run -u root \
     -p 5444:5444 \
     -e "XMPP_DOMAIN=$DOMAIN" \
     -e "EJABBERD_ADMINS=admin@$DOMAIN" \
-    -e "EJABBERD_USERS=admin@$DOMAIN:ADMINPASS" \
+    -e "EJABBERD_USERS=admin@$DOMAIN:$ADMINPASS" \
     -e "EJABBERD_REGISTER_ADMIN_ONLY=true" \
     -v /opt/xmpp/ejabberd/database/:/opt/ejabberd/database \
     -v /opt/xmpp/ejabberd/conf/:/opt/ejabberd/conf \
@@ -55,5 +55,5 @@ sudo docker run -u root \
  docker restart ejabberd
      
 echo "open in web browser    :  https://$DOMAIN:5280/admin"
-echo "user : admin    ;  password    :  $ADMINPAS"
+echo "user : admin    ;  password    :  $ADMINPASS"
 
