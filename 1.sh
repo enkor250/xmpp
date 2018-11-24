@@ -22,8 +22,8 @@ sudo add-apt-repository ppa:certbot/certbot -y
 sudo apt-get update
 sudo apt-get install certbot -y
 
-certbot register --email admin@$DOMAIN --agree-tos
-certbot certonly --standalone -n -m admin@$DOMAIN --agree-tos -d $DOMAIN --rsa-key-size 4096 --server https://acme-v02.api.letsencrypt.org/directory
+#certbot register --email admin@$DOMAIN --agree-tos
+certbot certonly --standalone --register-unsafely-without-email --agree-tos -d $DOMAIN --rsa-key-size 4096 --server https://acme-v02.api.letsencrypt.org/directory
 
 cd /opt
 git clone https://github.com/it-toppp/xmpp.git
