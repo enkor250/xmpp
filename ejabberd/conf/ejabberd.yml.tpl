@@ -356,7 +356,7 @@ modules:
       persistent: true
       mam : true
   {%- if env['EJABBERD_MOD_MUC_ADMIN'] == "true" %}
-  mod_muc_admin:
+  mod_muc_admin: {}
   {% endif %}
   ## mod_muc_log: {}
   ## mod_multicast: {}
