@@ -17,11 +17,5 @@ services:
       - ./ejabberd/conf/:/opt/ejabberd/conf
       - ./ejabberd/ssl/:/opt/ejabberd/ssl
       - ./ejabberd/upload/:/opt/ejabberd/upload/
-
-    environment:
-#       - ERLANG_NODE=localhost
-       - XMPP_DOMAIN=it-top.pp.ua
-       - EJABBERD_ADMINS=admin@it-top.pp.ua
-       - EJABBERD_USERS=admin@it-top.pp.ua:123456
-       - EJABBERD_REGISTER_ADMIN_ONLY=true
-       - EJABBERD_MOD_MUC_ADMIN=true
+    env_file: .env
+   
