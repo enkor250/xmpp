@@ -10,7 +10,7 @@ services:
       - 5222:5222
       - 5269:5269
       - 5280:5280
-      - 5277:5277
+      - 5281:5281
       - 5443:5443
     volumes:
       - ./ejabberd/database/:/opt/ejabberd/database
