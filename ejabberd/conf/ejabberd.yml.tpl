@@ -477,3 +477,4 @@ redis_connect_timeout: {{ env['EJABBERD_REDIS_CONNECT_TIMEOUT'] or 1 }}
 ## Full path to a script that generates the image.
 captcha_cmd: "{{ env.get('EJABBERD_CAPTCHA_CMD', '/usr/local/lib/ejabberd-' ~ env['EJABBERD_BRANCH'] ~ '/priv/bin/captcha.sh') }}"
 {% endif %}
+captcha_host: "localhost"
